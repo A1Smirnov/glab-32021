@@ -1,14 +1,17 @@
 import React from 'react';
-import './Content.css';
+import { motion } from 'framer-motion';
 
 function Content(props) {
-  const contentStyle = {
-    color: props.color,
-    fontSize: '18px',
-    lineHeight: '1.6',
-  };
-
-  return <p style={contentStyle}>{props.text}</p>;
+  return (
+    <motion.p
+      style={{ color: props.color, fontSize: '18px', lineHeight: '1.6', textAlign: 'center' }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      {props.text}
+    </motion.p>
+  );
 }
 
 export default Content;

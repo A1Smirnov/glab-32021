@@ -1,10 +1,12 @@
 import React from 'react';
-import './Header.css';
+import { Typography } from '@mui/material';
 
 function Header() {
   return (
-    <header className="header">
-      <h1>Simple React Application</h1>
+    <header>
+      <Typography variant="h3" component="h1" align="center" color="primary">
+        Simple React Application with MUI
+      </Typography>
     </header>
   );
 }
